@@ -4,11 +4,12 @@
 
 semaphoreMutex
 инвариант: для любого i, k in [1..N] : (i != k) =>  ! (CriticalSection(i) и CriticalSection(k)) 
-выполнился без ошибок, скрин по ссылке -> 
+выполнился без ошибок, скрин по ссылке -> https://github.com/jmacgyve/tla/blob/main/1.tla:pluscal/screenshot.png
 
 deadlockEmpire Solutions tla+/pluscal
 
 Simple Counter
+https://deadlockempire.github.io/#3-simpleCounter
 /\  counter = 0
 /\  pc = (0 :> "L1" @@ 1 :> "R1")
 
@@ -59,6 +60,7 @@ Simple Counter
 FINISHED
 
 Confused Counter
+https://deadlockempire.github.io/#4-confusedCounter
 /\  first = 0
 /\  pc = (0 :> "L1" @@ 1 :> "R1a")
 /\  second = 0
