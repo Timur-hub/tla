@@ -10,6 +10,10 @@ deadlockEmpire Solutions tla+/pluscal
 
 Simple Counter
 https://deadlockempire.github.io/#3-simpleCounter
+
+инвариант -> оба заходят в критическую секцию
+DeadlockCondition == {pc[0],pc[1]} /= {"L4", "R4"}
+
 /\  counter = 0
 /\  pc = (0 :> "L1" @@ 1 :> "R1")
 
@@ -61,6 +65,10 @@ FINISHED
 
 Confused Counter
 https://deadlockempire.github.io/#4-confusedCounter
+
+инвариант -> заход в критическую секцию
+DeadlockCondition == {pc[0]} /= {"L5"}
+
 /\  first = 0
 /\  pc = (0 :> "L1" @@ 1 :> "R1a")
 /\  second = 0
